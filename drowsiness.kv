@@ -1,0 +1,25 @@
+# drowsiness.kv
+
+MDScreen:
+    BoxLayout:
+        orientation: "vertical"
+
+        AsyncImage:
+            source: "path_to_your_logo.png"  # Set the path to your app logo
+
+        MDLabel:
+            text: "Drowsiness Detection App"
+            halign: "center"
+            font_style: "H4"
+
+        MDRaisedButton:
+            text: "Start Detection"
+            on_press: app.start_detection()
+
+        MDRaisedButton:
+            text: "Stop Detection"
+            on_press: app.stop_detection()
+
+        MDLabel:
+            text: "Status: {}".format(app.detection_status)
+            halign: "center"
